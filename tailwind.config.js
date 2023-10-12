@@ -50,12 +50,19 @@ export default {
                     "sans-serif",
                 ],
             },
+            boxShadow: {
+                "shadow-active-btn": "inset 0 0 16px 3px #9b9b9b47",
+            },
+            dropShadow: {
+                'icon': '0px 0px 2px #ffffff',
+            },
             backgroundColor: {
                 "header-bg": "#0A0517",
             },
             backgroundImage: {
                 "text-gradient": "linear-gradient(131deg, #8744AE 0%, #62DFFF 100%)",
-                "octagon-gradient": 'linear-gradient(89deg, #191919 0.58%, #292929 98.96%);'
+                "octagon-gradient": "linear-gradient(89deg, #191919 0.58%, #292929 98.96%)",
+                "gradient-header-secondary": 'radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)'
             },
         },
     },
@@ -64,14 +71,14 @@ export default {
             addComponents({
                 ".main-bg": {
                     background:
-                        "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), lightgray 0% 0% / 100px 100px repeat, radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)",
+                        "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)",
                 },
                 ".gradient-text": {
                     backgroundImage: theme("backgroundImage.text-gradient"),
                     color: theme("colors.transparent"),
                     backgroundClip: "text",
                 },
-                ".gradient-text-v2": {
+                /*   ".gradient-text-v2": {
                     backgroundImage: theme("backgroundImage.gradient-text-v2"),
                     color: theme("colors.transparent"),
                     backgroundClip: "text",
@@ -98,7 +105,7 @@ export default {
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100% auto",
-                },
+                }, */
             });
         }),
     ],

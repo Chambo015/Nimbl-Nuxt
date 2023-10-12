@@ -1,5 +1,7 @@
 <template>
-    <div class="octagon_mask"></div>
+    <div class="octagon_mask">
+        <slot />
+    </div>
 </template>
 
 <script setup lang="ts"></script>
