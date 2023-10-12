@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input {
+    @apply font-tt-octosquares
+  }
+}
+
 html, body {
   min-height: 100vh;
   overflow: hidden;

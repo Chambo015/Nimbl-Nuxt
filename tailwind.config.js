@@ -55,6 +55,7 @@ export default {
             },
             backgroundImage: {
                 "text-gradient": "linear-gradient(131deg, #8744AE 0%, #62DFFF 100%)",
+                "octagon-gradient": 'linear-gradient(89deg, #191919 0.58%, #292929 98.96%);'
             },
         },
     },
