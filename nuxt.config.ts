@@ -7,6 +7,6 @@ export default defineNuxtConfig({
     cssPath: false 
   },
   image: {
-    format: ['webp']
+    format: ['webp'],
   }
 })

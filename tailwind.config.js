@@ -4,57 +4,15 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                ethnocentric: [
-                    "Ethnocentric",
-                    "Inter",
-                    "-apple-system",
-                    "BlinkMacSystemFont",
-                    "Segoe UI",
-                    "Roboto",
-                    "Oxygen",
-                    "Ubuntu",
-                    "Cantarell",
-                    "Fira Sans",
-                    "Droid Sans",
-                    "Helvetica Neue",
-                    "sans-serif",
-                ],
-                "tt-octosquares": [
-                    "TT Octosquares",
-                    "Inter",
-                    "-apple-system",
-                    "BlinkMacSystemFont",
-                    "Segoe UI",
-                    "Roboto",
-                    "Oxygen",
-                    "Ubuntu",
-                    "Cantarell",
-                    "Fira Sans",
-                    "Droid Sans",
-                    "Helvetica Neue",
-                    "sans-serif",
-                ],
-                rollbox: [
-                    "Rollbox",
-                    "Inter",
-                    "-apple-system",
-                    "BlinkMacSystemFont",
-                    "Segoe UI",
-                    "Roboto",
-                    "Oxygen",
-                    "Ubuntu",
-                    "Cantarell",
-                    "Fira Sans",
-                    "Droid Sans",
-                    "Helvetica Neue",
-                    "sans-serif",
-                ],
+                ethnocentric: ["Ethnocentric", "Inter", "-apple-system", "sans-serif"],
+                "tt-octosquares": ["TT Octosquares", "Inter", "-apple-system", "sans-serif"],
+                rollbox: ["Rollbox", "Inter", "-apple-system", "sans-serif"],
             },
             boxShadow: {
                 "shadow-active-btn": "inset 0 0 16px 3px #9b9b9b47",
             },
             dropShadow: {
-                'icon': '0px 0px 2px #ffffff',
+                icon: "0px 0px 2px #ffffff",
             },
             backgroundColor: {
                 "header-bg": "#0A0517",
@@ -62,7 +20,8 @@ export default {
             backgroundImage: {
                 "text-gradient": "linear-gradient(131deg, #8744AE 0%, #62DFFF 100%)",
                 "octagon-gradient": "linear-gradient(89deg, #191919 0.58%, #292929 98.96%)",
-                "gradient-header-secondary": 'radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)'
+                "gradient-header-secondary":
+                    "radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)",
             },
         },
     },
