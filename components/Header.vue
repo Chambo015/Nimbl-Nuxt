@@ -33,7 +33,7 @@
             /></masksMaskOctagon>
         </button>
         <div
-            class="animation-card-hover group relative ml-auto h-[57px] w-[320px] cursor-pointer overflow-hidden bg-gradient-header-secondary py-2 pl-[11px] pr-[70px]">
+            class="animation-card-hover group relative ml-auto h-[60px] w-[322px] cursor-pointer overflow-hidden bg-gradient-header-secondary py-2 pl-[11px] pr-[70px]  ">
             <p class="font-rollbox text-lg leading-none text-white/70">Weekly Leaderboard</p>
             <p class="font-tt-octosquares text-lg leading-tight text-white">#159 of 21.788</p>
             <NuxtImg
@@ -75,6 +75,6 @@
 
 <style scoped>
 .animation-card-hover {
-    @apply transition-all delay-300 duration-500 hover:-translate-y-1 hover:shadow-md hover:shadow-blue-800/50 hover:delay-0;
+    @apply delay-300 duration-500 hover:delay-0 ring-1 hover:ring-[#38004B] ring-white/5 transition-all;
 }
 </style>

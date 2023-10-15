@@ -1,5 +1,5 @@
 <template>
-    <div class="border_polygon bg-black">
+    <div class="border_polygon">
         <slot />
     </div>
 </template>
