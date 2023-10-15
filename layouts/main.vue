@@ -4,6 +4,7 @@
     <main class="main-bg flex-grow overflow-hidden">
       <slot />
     </main>
+    <Navigation />
   </div>
 </template>
 

@@ -22,6 +22,7 @@ export default {
                 "octagon-gradient": "linear-gradient(89deg, #191919 0.58%, #292929 98.96%)",
                 "gradient-header-secondary":
                     "radial-gradient(443.81% 434.72% at 322.31% -217.78%, #6F359C 0%, #01060C 100%)",
+                "nav-gradient": 'linear-gradient(271deg, #0D0C11 2.43%, #46387A 97.57%)'
             },
         },
     },
