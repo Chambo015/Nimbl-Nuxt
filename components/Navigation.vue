@@ -1,7 +1,7 @@
 <template>
     <div
        @mouseleave="mouseOverBlock"
-        class="octagon_mask fixed bottom-0 left-1/2 isolate z-10 flex  origin-bottom -translate-x-1/2 scale-75 cursor-pointer  justify-center gap-3 px-2 py-2 items-center  transition-all duration-500 hover:scale-100 delay-300 hover:delay-0"
+        class="octagon_mask fixed left-1/2 isolate z-10 flex  origin-bottom -translate-x-1/2 scale-75 cursor-pointer  justify-center gap-3 px-2 py-2 items-center  transition-all duration-500 hover:scale-100 delay-300 hover:delay-0"
         :class="[isOpenNav ? 'before:w-[320px] bottom-[10px] pb-2 opacity-100' : 'before:w-[68px] hover:opacity-100 -bottom-2 pb-5 opacity-60']">
         <button @click="isOpenNav = true" v-if="!isOpenNav" class="absolute inset-0 z-40"></button>
       <TransitionGroup name="list" >

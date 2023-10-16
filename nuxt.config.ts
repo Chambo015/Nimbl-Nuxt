@@ -8,5 +8,8 @@ export default defineNuxtConfig({
   },
   image: {
     format: ['webp'],
+  },
+  runtimeConfig: {
+    backendUrl: process.env.BACKEND_URL
   }
 })
