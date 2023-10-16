@@ -11,7 +11,6 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
     "eslint": "^8.51.0",
     "nuxt": "^3.7.4",
     "nuxt-icon": "^0.5.0",
@@ -24,6 +23,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.3",
+    "@nuxt/ui": "^2.9.0",
     "gsap": "^3.12.2"
   }
 }

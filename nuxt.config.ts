@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', 'nuxt-icon'],
+  modules: [ '@nuxt/image', 'nuxt-icon', '@nuxt/ui'],
   css: ['~/assets/css/main.css'],
   tailwindcss: {
     cssPath: false 

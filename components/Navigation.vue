@@ -1,16 +1,74 @@
 <template>
-    <div class="fixed bottom-0 left-1/2 h-[58px] w-[58px] -translate-x-1/2 bg-[#150c29] octagon_mask flex items-center justify-center cursor-pointer pt-[5px] shadow-[0px_2px_5px_rgba(101,41,225,0.35)]">
-        <div >
-            <IconsMarketplace />
-        </div>
+    <div
+       @mouseleave="mouseOverBlock"
+        class="octagon_mask fixed bottom-0 left-1/2 isolate z-10 flex  origin-bottom -translate-x-1/2 scale-75 cursor-pointer  justify-center gap-3 px-2 py-2 items-center  transition-all duration-500 hover:scale-100 delay-300 hover:delay-0"
+        :class="[isOpenNav ? 'before:w-[320px] bottom-[10px] pb-2 opacity-100' : 'before:w-[68px] hover:opacity-100 -bottom-2 pb-5 opacity-60']">
+        <button @click="isOpenNav = true" v-if="!isOpenNav" class="absolute inset-0 z-40"></button>
+      <TransitionGroup name="list" >
+            <button @click="handleNavItemClick('marketplace')" v-if="isOpenNav || activeNav === 'marketplace'" class="w-[50px] h-[50px]">
+                <UTooltip text="Marketplace" :open-delay="delayOpenTooltip" >
+                    <iconsNavMarketplace />
+                </UTooltip>
+            </button>
+            <button @click="handleNavItemClick('longs')" v-if="isOpenNav || activeNav === 'longs'" class="w-[50px] h-[50px]">
+                <UTooltip text="Longs" :open-delay="delayOpenTooltip">
+                    <iconsNavLongs />
+                </UTooltip>
+            </button>
+            <a @click="handleNavItemClick('main')" v-if="isOpenNav || activeNav === 'main'" class="w-[55px] h-[55px] flex-shrink-0">
+                <UTooltip text="Main" :open-delay="delayOpenTooltip">
+                    <NuxtImg
+                        format="webp"
+                        src="/img/logo.png"
+                        alt="logo"
+                        height="55"
+                        width="55"
+                        class="h-[55px] w-[55px] flex-shrink-0" />
+                </UTooltip>
+            </a>
+            <button @click="handleNavItemClick('chat')" v-if="isOpenNav || activeNav === 'chat'" class="w-[50px] h-[50px] flex-shrink-0">
+                <UTooltip text="Chat" :open-delay="delayOpenTooltip">
+                    <iconsNavChat />
+                </UTooltip>
+            </button>
+            <button @click="handleNavItemClick('channel')"  v-if="isOpenNav || activeNav === 'channel'" class="w-[50px] h-[50px]">
+                <UTooltip text="My Channel" :open-delay="delayOpenTooltip">
+                    <IconsNavChannel />
+                </UTooltip>
+            </button>
+      </TransitionGroup>
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type NavTypes = "main" | 'channel' | 'chat' | 'marketplace' | 'longs'
+const isOpenNav = ref(false);
+const activeNav = ref<NavTypes>("main");
+const delayOpenTooltip = 300
+
+const handleNavItemClick = (nav: NavTypes) => {
+    if(!isOpenNav.value) return
+    activeNav.value = nav
+    isOpenNav.value = false
+}
+
+const closeNavMenu = () => {
+    isOpenNav.value = false
+}
+let timeoutMouseOver: NodeJS.Timeout 
+const mouseOverBlock = () => {
+    timeoutMouseOver =  setTimeout(closeNavMenu, 200)
+}
+onUnmounted(() => {
+    clearTimeout(timeoutMouseOver)
+})
+</script>
 
 <style scoped>
-
-.octagon_mask {
+.octagon_mask::before {
+    content: "";
+    transition: all 300ms;
+    @apply absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-full block bg-[#150c29] shadow-[0px_2px_5px_rgba(101,41,225,0.35)] ;
     --v: 12px;
     --rV: calc(100% - var(--v));
     clip-path: polygon(
@@ -19,8 +77,34 @@
         var(--rV) 0%,
         100% var(--v),
         100% var(--rV),
-        100% 100%,
-        0 100%,
+        var(--rV) 100%,
+        var(--v) 100%,
         0% var(--rV)
     );
-}</style>
+}
+button {
+    display: block;
+}
+
+
+.list-move {
+    transition: all 0.5s ease;
+}
+.list-enter-active {
+  transition: all 0.5s ease;
+}
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-leave-active {
+  position: absolute;
+}
+</style>
