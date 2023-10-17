@@ -18,7 +18,7 @@
                 class="absolute right-0 top-1/2 h-[34px] w-[37.5px] -translate-y-1/2 translate-x-1/2 select-none pointer-events-none" />
           </div>
       </div>
-      <userAvatar class="w-[55px] h-[55px] flex-shrink-0 ml-4" />
+      <userAvatar primary class="w-[55px] h-[55px] flex-shrink-0 ml-4" />
     </div>
 </template>
 

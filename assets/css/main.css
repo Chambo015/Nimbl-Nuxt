@@ -6,7 +6,10 @@
 
 @layer base {
   input {
-    @apply font-tt-octosquares
+    @apply font-tt-octosquares;
+  }
+  button {
+    @apply font-tt-octosquares;
   }
 }
 
@@ -16,6 +19,7 @@ html, body {
 }
 
 :root {
-  font-family: 'Ethnocentric';
+  font-family: 'TT Octosquares', 'Ethnocentric';
   color: white;
 }
+
