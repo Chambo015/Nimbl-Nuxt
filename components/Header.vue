@@ -33,19 +33,19 @@
             /></masksMaskOctagon>
         </button>
         <div
-            class="animation-card-hover group relative ml-auto h-[60px] w-[322px] cursor-pointer overflow-hidden bg-gradient-header-secondary py-2 pl-[11px] pr-[70px]  ">
-            <p class="font-rollbox text-lg leading-none text-white/70">Weekly Leaderboard</p>
-            <p class="font-tt-octosquares text-lg leading-tight text-white">#159 of 21.788</p>
+            class="animation-card-hover group relative ml-auto h-[50px] w-[322px] cursor-pointer overflow-hidden bg-gradient-header-secondary py-2 pl-[11px] pr-[70px]  ">
+            <p class="font-rollbox text-base leading-none text-white/70">Weekly Leaderboard</p>
+            <p class="font-tt-octosquares text-sm leading-tight text-white">#159 of 21.788</p>
             <NuxtImg
                 format="webp"
                 src="/img/rocket_img.png"
-                width="133"
-                height="133"
+                width="110"
+                height="110"
                 alt="rocket_img"
                 class="absolute right-0 top-0 -translate-y-[25px] translate-x-1/4 transition-all duration-1000 group-hover:drop-shadow-icon" />
         </div>
         <div
-            class="animation-card-hover group main-bg relative ml-2 h-[57px] w-[210px] cursor-pointer overflow-hidden py-[11px] pl-[60px]">
+            class="animation-card-hover group main-bg relative ml-2 h-[50px] w-[210px] cursor-pointer overflow-hidden py-[11px] pl-[60px]">
             <NuxtImg
                 format="webp"
                 src="/img/logo.png"
@@ -53,16 +53,16 @@
                 height="46"
                 width="46"
                 class="absolute left-2 top-1/2 h-[46px] w-[46px] -translate-y-1/2 saturate-0 transition-all duration-1000 group-hover:drop-shadow-icon" />
-            <p class="font-rollbox text-lg leading-none text-white/70">Your points</p>
-            <p class="font-tt-octosquares text-lg leading-tight text-white">22.514</p>
+            <p class="font-rollbox text-base leading-none text-white/70">Your points</p>
+            <p class="font-tt-octosquares text-sm leading-tight text-white">22.514</p>
         </div>
-        <button class="group ml-4 h-[54px] w-[54px] flex-shrink-0">
+        <button class="group ml-4 h-[50px] w-[50px] flex-shrink-0">
             <masksMaskOctagon class="flex h-full w-full items-center justify-center bg-octagon-gradient">
                 <Icon
                     name="mdi:bell-outline"
                     color="white"
-                    class="relative z-10 flex-shrink-0 transition-all group-hover:drop-shadow-icon group-active:drop-shadow-none"
-                    size="28"
+                    class="relative z-10 flex-shrink-0 transition-transform duration-500 group-hover:scale-125"
+                    size="24"
             /></masksMaskOctagon>
         </button>
         <userHeaderRangInfo class="flex-shrink-0 ml-5" />
